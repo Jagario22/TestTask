@@ -9,15 +9,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CharacterCounterTest {
-    private CharacterCounter characterCounter;
-
-    @BeforeEach
-    void setUp() {
-        characterCounter = new CharacterCounter();
-    }
 
     @Test
     public void testCountCharacters_SingleCharacterWord() {
+        CharacterCounter characterCounter = new CharacterCounter();
         String word = "a";
         Map<Character, Integer> expected = new HashMap<>();
         expected.put('a', 1);
@@ -29,6 +24,7 @@ public class CharacterCounterTest {
 
     @Test
     public void testCountCharacters_MultipleCharacterWord() {
+        CharacterCounter characterCounter = new CharacterCounter();
         String word = "hello";
         Map<Character, Integer> expected = new HashMap<>();
         expected.put('h', 1);
@@ -43,6 +39,7 @@ public class CharacterCounterTest {
 
     @Test
     public void testCountCharacters_WordWithSpaces() {
+        CharacterCounter characterCounter = new CharacterCounter();
         String word = "  hello  ";
         Map<Character, Integer> expected = new HashMap<>();
         expected.put('h', 1);
@@ -57,6 +54,7 @@ public class CharacterCounterTest {
 
     @Test
     public void testCountCharacters_EmptyWord() {
+        CharacterCounter characterCounter = new CharacterCounter();
         String word = "";
         Map<Character, Integer> expected = new HashMap<>();
 
